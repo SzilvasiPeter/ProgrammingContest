@@ -14,7 +14,7 @@ namespace ProgrammingContest
             int numberOfSheep = 0;
             int[,] coordinates;
 
-            using (StreamReader streamReader = new StreamReader(@"c:\Users\petis\Downloads\MSC\2\Minőségbiztosítás\inputs\A\A2.in"))
+            using (StreamReader streamReader = new StreamReader(@"./inputs/A/A2.in"))
             {
                 numberOfSheep = Int32.Parse(streamReader.ReadLine());
                 string line = streamReader.ReadLine();
