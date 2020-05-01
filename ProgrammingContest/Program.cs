@@ -11,29 +11,33 @@ namespace ProgrammingContest
     {
         static void Main(string[] args)
         {
-            int numberOfSheep = 0;
-            int[,] coordinates;
+            //int numberOfSheep = 0;
+            //int[,] coordinates;
 
-            using (StreamReader streamReader = new StreamReader(@"./inputs/A/A2.in"))
-            {
-                numberOfSheep = Int32.Parse(streamReader.ReadLine());
-                string line = streamReader.ReadLine();
-                coordinates = new int[numberOfSheep, 2];
-                for (int i = 1; i < numberOfSheep; i++)
-                {
-                    line = streamReader.ReadLine();
-                    string[] xyCoordinates = line.Split(' ');
-                    int x = Int32.Parse(xyCoordinates[0]);
-                    int y = Int32.Parse(xyCoordinates[1]);
-                    coordinates[i, 0] = x;
-                    coordinates[i, 1] = y;
-                }
-            }
+            //using (StreamReader streamReader = new StreamReader(@"./inputs/A/A2.in"))
+            //{
+            //    numberOfSheep = Int32.Parse(streamReader.ReadLine());
+            //    string line = streamReader.ReadLine();
+            //    coordinates = new int[numberOfSheep, 2];
+            //    for (int i = 1; i < numberOfSheep; i++)
+            //    {
+            //        line = streamReader.ReadLine();
+            //        string[] xyCoordinates = line.Split(' ');
+            //        int x = Int32.Parse(xyCoordinates[0]);
+            //        int y = Int32.Parse(xyCoordinates[1]);
+            //        coordinates[i, 0] = x;
+            //        coordinates[i, 1] = y;
+            //    }
+            //}
+            //double[] maxAngleOfSheeps = GetPointsMaxAngle(coordinates, numberOfSheep);
+            //double minimumEyeMovoment = maxAngleOfSheeps.Min();
+            //Console.WriteLine(minimumEyeMovoment);
+
+            Wizard wizard = new Wizard(@"./inputs/A/A2.in");
+            int minIndex = wizard.GetAtLeastEyeMovomentSheep();
+            Console.WriteLine(minIndex);
 
             SimpleExample();
-            double[] maxAngleOfSheeps = GetPointsMaxAngle(coordinates, numberOfSheep);
-            double minimumEyeMovoment = maxAngleOfSheeps.Min();
-            Console.WriteLine(minimumEyeMovoment);
 
             Console.ReadLine();
         }
@@ -123,6 +127,7 @@ namespace ProgrammingContest
                     }
 
                     index = 0;
+                    // TODO: optimalization -> k = j + 1. Only compare k and i
                     for (int k = 0; k < n; k++)
                     {
                         if (k == i || k == j)

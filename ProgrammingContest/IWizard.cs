@@ -12,7 +12,7 @@ namespace ProgrammingContest
 
         double[] GetSheepsMaximumEyeMovoment(int numberOfSheep);
 
-        int GetAtLeastEyeMovomentSheep(double[] sheepEyeMovoments);
+        int GetAtLeastEyeMovomentSheep();
 
         int[,] SheepCoordinates { get; set; }
 
