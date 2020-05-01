@@ -10,12 +10,12 @@ namespace ProgrammingContest
     {
         double GetThreeSheepAngle(int y, int x, int z);
 
-        double[] GetSheepsMaximumEyeMovoment(int numberOfSheep);
+        double[] GetSheepsMaximumEyeMovoment();
 
         int GetAtLeastEyeMovomentSheep();
 
         int[,] SheepCoordinates { get; set; }
 
-        int numberOfSheep { get; set; }
+        int NumberOfSheep { get; set; }
     }
 }

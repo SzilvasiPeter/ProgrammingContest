@@ -14,12 +14,16 @@ namespace ProgrammingContest
             ReadCoordinatesFromFile(inputFilePath);
         }
 
+        public Wizard()
+        {
+        }
+
         public int GetAtLeastEyeMovomentSheep()
         {
-            double[] maxAngleOfPoints = GetSheepsMaximumEyeMovoment(numberOfSheep);
+            double[] maxAngleOfPoints = GetSheepsMaximumEyeMovoment();
             double temp = Double.MaxValue;
             int minIndex = 0;
-            for (int i = 0; i < numberOfSheep; i++)
+            for (int i = 0; i < NumberOfSheep; i++)
             {
                 if(temp > maxAngleOfPoints[i])
                 {
@@ -31,22 +35,22 @@ namespace ProgrammingContest
             return minIndex;
         }
 
-        public double[] GetSheepsMaximumEyeMovoment(int numberOfSheep)
+        public double[] GetSheepsMaximumEyeMovoment()
         {
-            double[] angles = new double[numberOfSheep - 2];
-            double[] MaxAngles = new double[numberOfSheep];
-            double[] EdgesMaxAngle = new double[numberOfSheep];
+            double[] angles = new double[NumberOfSheep - 2];
+            double[] MaxAngles = new double[NumberOfSheep];
+            double[] EdgesMaxAngle = new double[NumberOfSheep];
 
-            for (int i = 0; i < numberOfSheep; i++)
+            for (int i = 0; i < NumberOfSheep; i++)
             {
                 int index = 0;
                 int maxIndex = 0;
-                for (int j = 0; j < numberOfSheep; j++)
+                for (int j = 0; j < NumberOfSheep; j++)
                 {
-                    if (index == numberOfSheep - 2)
+                    if (index == NumberOfSheep - 2)
                     {
                         MaxAngles[maxIndex] = angles.Max();
-                        angles = new double[numberOfSheep - 2];
+                        angles = new double[NumberOfSheep - 2];
                         maxIndex++;
                     }
                     else if (index != 0)
@@ -63,7 +67,7 @@ namespace ProgrammingContest
 
                     index = 0;
                     // TODO: optimalization -> k = j + 1. Only compare k and i
-                    for (int k = 0; k < numberOfSheep; k++)
+                    for (int k = 0; k < NumberOfSheep; k++)
                     {
                         if (k == i || k == j)
                         {
@@ -80,7 +84,7 @@ namespace ProgrammingContest
                 }
 
                 MaxAngles[maxIndex] = angles.Max();
-                angles = new double[numberOfSheep - 2];
+                angles = new double[NumberOfSheep - 2];
                 EdgesMaxAngle[i] = MaxAngles.Max();
             }
 
@@ -103,16 +107,16 @@ namespace ProgrammingContest
 
         public int[,] SheepCoordinates { get; set; }
 
-        public int numberOfSheep { get; set; }
+        public int NumberOfSheep { get; set; }
 
         private void ReadCoordinatesFromFile(string inputFilePath)
         {
             using (StreamReader streamReader = new StreamReader(inputFilePath))
             {
-                numberOfSheep = Int32.Parse(streamReader.ReadLine());
+                NumberOfSheep = Int32.Parse(streamReader.ReadLine());
                 string line = streamReader.ReadLine();
-                SheepCoordinates = new int[numberOfSheep, 2];
-                for (int i = 1; i < numberOfSheep; i++)
+                SheepCoordinates = new int[NumberOfSheep, 2];
+                for (int i = 1; i < NumberOfSheep; i++)
                 {
                     line = streamReader.ReadLine();
                     string[] xyCoordinates = line.Split(' ');
