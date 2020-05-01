@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Sheep_of_the_Wizard", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Sheep_of_the_Wizard_uTest", "The_Sheep_of_the_Wizard_uTest\The_Sheep_of_the_Wizard_uTest.csproj", "{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{36EB2095-E35A-4C27-84B8-4D3D579E2997}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3AD66C1B-E089-4011-ACC6-F1BC7CE18341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{901A1D55-4B50-4F4E-813B-A2E1AE92A0BB} = {36EB2095-E35A-4C27-84B8-4D3D579E2997}
+		{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64} = {3AD66C1B-E089-4011-ACC6-F1BC7CE18341}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF74482B-D15C-4675-ABD9-B1638241A1E4}
