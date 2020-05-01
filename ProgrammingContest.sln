@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Sheep_of_the_Wizard", "ProgrammingContest\The_Sheep_of_the_Wizard.csproj", "{901A1D55-4B50-4F4E-813B-A2E1AE92A0BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Sheep_of_the_Wizard_uTest", "The_Sheep_of_the_Wizard_uTest\The_Sheep_of_the_Wizard_uTest.csproj", "{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{901A1D55-4B50-4F4E-813B-A2E1AE92A0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{901A1D55-4B50-4F4E-813B-A2E1AE92A0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{901A1D55-4B50-4F4E-813B-A2E1AE92A0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4F7BDC-514A-463E-AF9D-DC006B6E7A64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
